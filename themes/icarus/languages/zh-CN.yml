@@ -32,7 +32,7 @@ donate:
 plugin:
     backtotop: '回到顶端'
     visit: '%s次访问'
-    visitor: '共%s个访客'
+    visitor: '你是本站点的第%s个访客'
 search:
     search: '搜索'
     hint: '想要查找什么...'

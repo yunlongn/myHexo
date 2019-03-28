@@ -1,13 +1,13 @@
-# Hexo Configuration
+﻿# Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 云扬四海
 subtitle:
 description:
 keywords:
-author: John Doe
+author: RolandLee
 language: zh-CN
 timezone:
 
