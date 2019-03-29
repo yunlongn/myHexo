@@ -29,7 +29,6 @@ categories:
 - Java NIO引入了选择器的概念，选择器用于监听多个通道的事件（比如：连接打开，数据到达）。因此，单个的线程可以监听多个数据通道。
 -  注意:传统IT是单向。 NIO类似
 
-![](https://images-roland.oss-cn-shenzhen.aliyuncs.com//blog/图片1.png)
 
 ### Buffer的概述
 
@@ -38,8 +37,6 @@ categories:
 3）位置（position）：下一个要读取或写入的数据的索引。缓冲区的位置不能为负，并且不能大于其限制（limit）。
 4）标记（mark）与重置（reset）：标记是一个索引，通过Buffer中的mark()方法指定Buffer中一个特定的position，之后可以通过调用reset()方法恢复到这个position。
 
-### make与rest用法
-#### 标记（mark）与重置（reset）：标记是一个索引，通过Buffer中的mark()方法指定Buffer中一个特定的position，之后可以通过调用reset()方法恢复到这个position。
 
 #### 直接缓冲区与非直接缓冲耗时计算
 ```
