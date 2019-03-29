@@ -41,7 +41,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace:
   
 # Home page setting
@@ -81,3 +81,15 @@ deploy:
   type: git
   repo: git@github.com:yunlongn/yunlongn.gihub.io.git
   branch: master
+admin:
+  username: 763506525
+  password_hash: $2a$10$Sc6UzPJnkHlhBc75rWb7zOx1tuI8QWEahtWJJsBRvpDhG0mfZekxq
+  secret: my name is Roland Lee
+  qiniuCfg:
+      imageslim: true  # 启动图片瘦身，仅华东区bucket可以使用
+      AccessKey: 'sAQyBxYXH6Re_3F0U5IOIHogCrWk2N5CFb4CiT4X'
+      SecretKey: 'I5w5rttkNgIOYumJHdYGgKFXtJCKuIT2DY_23brC'
+      BucketName: 'roland'
+      bucketHost: 'http://pp4bsxgau.bkt.clouddn.com'
+
+  

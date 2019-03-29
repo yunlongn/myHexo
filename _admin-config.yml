@@ -1,0 +1,9 @@
+options:
+  lineNumbers: true
+  spellcheck: true
+  imagePath: /blog
+  askImageFilename: false
+editor:
+  lineNumbers: true
+  inputStyle: contenteditable
+  spellcheck: true
