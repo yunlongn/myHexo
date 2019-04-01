@@ -158,6 +158,11 @@ widgets:
         position: left
     -
         # Widget name
+        type: archive
+        # Where should the widget be placed, left or right
+        position: left
+    -
+        # Widget name
         type: category
         # Where should the widget be placed, left or right
         position: left
@@ -169,11 +174,6 @@ widgets:
     -
         # Widget name
         type: recent_posts
-        # Where should the widget be placed, left or right
-        position: right
-    -
-        # Widget name
-        type: archive
         # Where should the widget be placed, left or right
         position: right
     -
