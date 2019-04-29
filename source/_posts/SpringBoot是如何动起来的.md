@@ -1,16 +1,14 @@
-﻿---
 title: SpringBoot是如何动起来的
-date: 2019-03-28 09:40:08
 tags:
-- Java
+  - Java
 categories:
-- Spring Boot
+  - Spring Boot
+date: 2019-03-28 09:40:08
 ---
-
 ### 程序入口
 <!-- more -->
 
-```
+
 ## SpringBoot是如何动起来的
 
 ### 程序入口
