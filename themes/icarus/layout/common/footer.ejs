@@ -1,4 +1,5 @@
-<footer class="footer">
+<footer class="footer" style="position: relative;margin-top: 230px;">
+    <div class="footer-image"></div>
     <div class="container">
         <div class="level">
             <div class="level-start has-text-centered-mobile">
@@ -43,3 +44,16 @@
         </div>
     </div>
 </footer>
+
+<style>
+    .footer-image{
+        background: url(/images/o_cnblogs_footer.png) no-repeat 50%;
+        height: 368px;
+        top: -290px;
+        z-index: 1;
+        position: absolute;
+        bottom: 70px;
+        width: 100%;
+        pointer-events: none;
+    }
+</style>
