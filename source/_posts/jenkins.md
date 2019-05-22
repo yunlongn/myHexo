@@ -1,7 +1,8 @@
 title: jenkins
 author: RolandLee
 tags:
-  - springboot
+  - SpringBoot
+  - ''
 categories:
   - java
 date: 2019-04-25 23:25:00
@@ -256,6 +257,31 @@ Path to key 写上生成的ssh路径：`/root/.ssh/id_rsa`
 
 > 点击下方增加可以添加多个应用服务器的地址
 
+
+## jenkins+docker+nodejs项目的自动部署环境
+
+https://my.oschina.net/gaochunzhang/blog/2246923
+- 构建环境如果没有Node选项，前往系统管理--Global Tool Configuration设置
+![](https://images-roland.oss-cn-shenzhen.aliyuncs.com//blog/20190509093550.png)
+
+- 选择构建环境：  
+
+![](https://images-roland.oss-cn-shenzhen.aliyuncs.com//blog/20190509093506.png)
+
+- 构建环境
+![](https://images-roland.oss-cn-shenzhen.aliyuncs.com//blog/20190509093417.png)
+
+## Build Authorization Token Root Plugin 插件使用说明 
+
+此插件是用来让你的远程git发布文件通知jenkins的时候允许匿名访问，原本路径为job/NAME/build?token=SECRET。不幸的是，Jenkins按层次结构检查URI，并且访问job/NAME/ 这个的时候需要进行身份验证。
+
+此插件提供备用URI模式，该模式不受通常的整体或作业读取权限的约束。只需发出Http GET或POST即可buildByToken/build?job=NAME&token=SECRET。无论安全设置如何，匿名用户都可以访问此URI，因此您只需要正确的令牌。
+
+[Build Authorization Token Root Plugin 插件使用说明](https://wiki.jenkins-ci.org/display/JENKINS/Build+Token+Root+Plugin)
+ 
+ - 使用例子 `buildByToken/build?job=NAME&token=SECRET`
+ 
+ 
 ## 第四步，部署项目 
 
 首页点击**新建**：输入项目名称
@@ -336,9 +362,33 @@ cd backup/
 ls -lt|awk 'NR>5{print $NF}'|xargs rm -rf
 ```
 
+
+
+
+```
+#!/bin/bash
+JAR_NAME=demo-0.0.1
+SERVER_NAME=mmly
+# 项目目录
+JAR_PAHT=/var/jenkins_home/workspace/mmly/target
+
+echo "查询进程id--》$JAR_NAME"
+
+PID=$(ps -ef | grep $JAR_NAME.jar | grep -v grep | awk '{ print $2 }')
+if [ -z "$PID" ]
+then
+    echo Application is already stopped
+else
+    echo kill $PID
+    kill $PID
+fi
+
+# echo "复制jar包到执行目录：cp "
+
+nohup java -jar $JAR_PAHT/$JAR_NAME.jar > myout.file 2>&1 &
+```
 这段脚本的意思，就是 kill 旧项目，删除旧项目，启动新项目，备份老项目。
 
 全文完。
 
 参考：https://blog.csdn.net/LLQ_200/article/details/76921487
-
