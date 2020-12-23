@@ -1,0 +1,70 @@
+widgets:
+    # Profile widget configurations
+    -
+        # Where should the widget be placed, left sidebar or right sidebar
+        position: left
+        type: profile
+        # Author name
+        author: 云扬四海
+        # Author title
+        author_title: 云扬四海
+        # Author's current location
+        location: 广东 河源
+        # URL or path to the avatar image
+        avatar: 
+        # Whether show the rounded avatar image
+        avatar_rounded: false
+        # Email address for the Gravatar
+        gravatar: 
+        # URL or path for the follow button
+        follow_link: 'http://github.com/yunlongn'
+        # Links to be shown on the bottom of the profile widget
+        social_links:
+            Github:
+                icon: fab fa-github
+                url: 'http://github.com/yunlongn'
+#            Facebook:
+#                icon: fab fa-facebook
+#                url: 'http://facebook.com'
+#            Twitter:
+#                icon: fab fa-twitter
+#                url: 'http://twitter.com'
+            cnblogs:
+                icon: fas fa-book
+                url: 'https://www.cnblogs.com/rolandlee/'
+            RSS:
+                icon: fas fa-rss
+                url: /atom.xml
+    # Table of contents widget configurations
+    -
+        # Where should the widget be placed, left sidebar or right sidebar
+        position: left
+        type: toc
+        # Whether to show the index of each heading
+        index: true
+        # Whether to collapse sub-headings when they are out-of-view
+        collapsed: true
+        # Maximum level of headings to show (1-6)
+        depth: 3
+    # Recommendation links widget configurations
+    -
+        # Widget name
+        type: archives
+        # Where should the widget be placed, left or right
+        position: left
+
+    -
+        # Widget name
+        type: tagcloud
+        # Where should the widget be placed, left or right
+        position: left
+
+    - # Widget name
+        type: links
+        # Where should the widget be placed, left or right
+        position: left
+        # Links to be shown in the links widget
+        links:
+            纯洁的微笑: 'http://www.ityouknow.com'
+            柒's: 'https://blog.52itstyle.vip/'
+            王登科: 'https://www.wdk.pw/'

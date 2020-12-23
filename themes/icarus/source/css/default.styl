@@ -1,0 +1,59 @@
+@import 'style'
+.footer-image{
+  background: url(/img/o_cnblogs_footer.png) no-repeat 50%;
+  height: 368px;
+  top: -290px;
+  z-index: 1;
+  position: absolute;
+  bottom: 70px;
+  width: 100%;
+  pointer-events: none;
+}
+.footer{
+  position: relative;
+}
+#galinv {
+  max-width: 100%;
+  max-height: 35vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-left: -40%;
+}
+
+@media screen and (max-width: 1900px) {
+  #galinv {
+    max-width: 100%;
+    max-height: 35vh;
+    position: relative;
+  }
+}
+div#posts.posts-expand .tag-cloud a{
+  background-color: #f5f7f1;
+  border-radius: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 18px;
+
+}
+
+.tag-cloud a{
+  background-color: #f5f7f1;
+  border-radius: 4px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-right: 5px;
+  margin-left: 0px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+
+}
+
+.tag-cloud a:before{
+  content: "?";
+}
+
+.tag-cloud-tags{
+  text-align: left;
+  counter-reset: tags;
+}
