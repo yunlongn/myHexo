@@ -12,7 +12,7 @@ tags:
 ## Micrometer提供的度量类库
 
 `Meter`是指一组用于收集应用中的度量数据的接口，Meter单词可以翻译为”米”或者”千分尺”，但是显然听起来都不是很合理，因此下文直接叫Meter，理解它为度量接口即可。`Meter`是由`MeterRegistry`创建和保存的，可以理解`MeterRegistry`是`Meter`的工厂和缓存中心，一般而言每个JVM应用在使用Micrometer的时候必须创建一个`MeterRegistry`的具体实现。Micrometer中，`Meter`的具体类型包括：`Timer`，`Counter`，`Gauge`，`DistributionSummary`，`LongTaskTimer`，`FunctionCounter`，`FunctionTimer`和`TimeGauge`。下面分节详细介绍这些类型的使用方法和实战使用场景。而一个`Meter`具体类型需要通过名字和`Tag`(这里指的是Micrometer提供的Tag接口)作为它的唯一标识，这样做的好处是可以使用名字进行标记，通过不同的`Tag`去区分多种维度进行数据统计。
-
+<!--more-->
 
 ## MeterRegistry
 
@@ -22,7 +22,7 @@ MeterRegistry在Micrometer是一个抽象类，主要实现包括：
 - 2、CompositeMeterRegistry：多个MeterRegistry聚合，内部维护了一个MeterRegistry的列表。
 - 3、全局的MeterRegistry：工厂类`io.micrometer.core.instrument.Metrics`中持有一个静态final的`CompositeMeterRegistry`实例globalRegistry。
 
-<!--more-->
+
 
 当然，使用者也可以自行继承MeterRegistry去实现自定义的MeterRegistry。`SimpleMeterRegistry`适合做调试的时候使用，它的简单使用方式如下：
 
@@ -972,4 +972,3 @@ sudo yum localinstall grafana-5.3.4-1.x86_64.rpm
 <div class="post-copyright__type" style="box-sizing: border-box; color: rgb(76, 73, 72); font-family: Lato, &quot;Helvetica Neue For Number&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><span class="post-copyright-meta" style="box-sizing: border-box; color: rgb(0, 0, 0); font-weight: bold;">文章链接:<span></span></span><span class="post-copyright-info" style="box-sizing: border-box;"><a href="http://www.throwable.club/2018/11/17/jvm-micrometer-prometheus/" style="box-sizing: border-box; background-color: transparent; color: rgb(0, 0, 0); transition: all 0.2s ease 0s; word-break: break-word;">http://www.throwable.club/2018/11/17/jvm-micrometer-prometheus/</a></span></div>
 
 <div class="post-copyright__notice" style="box-sizing: border-box; color: rgb(76, 73, 72); font-family: Lato, &quot;Helvetica Neue For Number&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><span class="post-copyright-meta" style="box-sizing: border-box; color: rgb(0, 0, 0); font-weight: bold;">版权声明:<span></span></span><span class="post-copyright-info" style="box-sizing: border-box;">本博客所有文章除特别声明外，均采用<span></span><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="box-sizing: border-box; background-color: transparent; color: rgb(0, 0, 0); transition: all 0.2s ease 0s; word-break: break-word;">CC BY-NC-SA 4.0</a><span></span>许可协议。转载请注明来自<span></span><a href="http://www.throwable.club/" style="box-sizing: border-box; background-color: transparent; color: rgb(0, 0, 0); transition: all 0.2s ease 0s; word-break: break-word;">Throwable</a>！</span></div>
-
