@@ -2734,10 +2734,10 @@ hexo-cli@^4.0.0:
     resolve "^1.11.0"
     tildify "^2.0.0"
 
-hexo-component-inferno@^0.10.1:
-  version "0.10.4"
-  resolved "https://registry.yarnpkg.com/hexo-component-inferno/-/hexo-component-inferno-0.10.4.tgz#dfb79bc04d583364ab7a9543e60212c0162b9429"
-  integrity sha512-KV5tgCvtQws2a0umDW5fQH6UDA0SeABzbtSB6CTsRazD8nfZN8QNkQLwnZyT6noOUYIRJNh+5vHd3QAhmhcEfQ==
+hexo-component-inferno@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/hexo-component-inferno/-/hexo-component-inferno-0.12.0.tgz#b0ec6cea154fa3030c11ebbe0d6b1b5091c4ff98"
+  integrity sha512-hP0gSuUW15n7RFR7k2ueSdi/CNT8nngVECmSQmPe1tMQy+k4BqodVPZyZiyA2qUAGuMjAPySEsnrqmTXDFKR+Q==
   dependencies:
     ajv "^6.10.2"
     inferno "^7.3.3"
@@ -2926,13 +2926,13 @@ hexo-tag-cloud@^2.1.2:
     hexo-fs "^0.2.2"
     hexo-log "^0.2.0"
 
-hexo-theme-icarus@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/hexo-theme-icarus/-/hexo-theme-icarus-4.1.1.tgz#0d1f55181f8bdfb37df8cb1196dce8672e03cdce"
-  integrity sha512-mKvvCOjSJ+9lVB/d4yTrrqNJsAc1Lrkag/wiZaHwLqtTexvVeckiUr7/hxPim49azIZM+7wQ79zEN2iMeUWhkQ==
+hexo-theme-icarus@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/hexo-theme-icarus/-/hexo-theme-icarus-4.3.0.tgz#de9a6d6f5da62081e8c1c6f7e4f53b3a19229def"
+  integrity sha512-BEUNMl5DTKCmmFQx1q/T1OIFvlSTmePTaj1WctlUTlgvaH34x10e8I0/RrQenxoUIkHzUIxdonXAiEBoO8/N0w==
   dependencies:
     deepmerge "^4.2.2"
-    hexo-component-inferno "^0.10.1"
+    hexo-component-inferno "^0.12.0"
     inferno "^7.3.3"
     inferno-create-element "^7.3.3"
     moment "^2.22.2"
